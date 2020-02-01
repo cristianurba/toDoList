@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#wrapper{
+    max-width: 800px;
+    display: inline-block;
+    border: 1px solid black;
+    margin: 10px auto;
+}
+.cabecera{
+height: 100px;
+background-color: black;
+}
+
+.cabecera #titulo{
+    color: white;
+    text-align: center;
+    padding: 2.5em;
+}
+
+#cuerpo{
+    display: flex;
+}
+
+#sidebar{
+    /* display: inline-block; */
+    background-color: #9999;
+    border: 1px solid black;
+    
+}
+
+#sidebar div{
+    padding: 10px;
+}
+
+.tareas article{
+    /* display: inline-block;
+    width: 95%;
+    margin: .5em 1em; */
+    /* padding: 1em; */
+border: 1px solid black;
+}
+
+main .tareas article{
+    position: relative;
+    border: 1px solid black;
+    border-radius: 25px;
+    padding: 1em;
+}
+
+main .tareas .diaria{
+    background-color: lightblue;
+}
+
+main .tareas .mensual{
+    background-color: lightgreen;
+}
+
+main .tareas .urgente{
+    background-color: tomato;
+}
+
+main .tareas article>a{
+    background-color: red;
+    color: white;
+    display: inline-block;
+    right: 3px;
+    bottom: 3px;
+    border-radius: 10px;
+    position: absolute;
+    text-decoration: none;
+    transition: 1s;
+}
+
+main .tareas article>a:hover{
+    width: 15%;
+    text-align: center;
+}
+
+footer{
+    height: 50px;
+    background-color: black;
+    color: white;
+}
+

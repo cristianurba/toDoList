@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+    <div id="wrapper">
+        <!-- CABECERA -->
+
+        <header>
+            <div class="cabecera">
+                <div id="titulo">
+                    <article>
+                        <h2>Lista de quehaceres</h2>
+                    </article>
+                </div>
+            </div>
+        </header>
+
+
+        <!-- SIDEBAR -->
+        <div id="cuerpo">
+            <div id="sidebar">
+                <div>
+                    <div>
+                        <h4>Dime los quehaceres</h4>
+                    </div>
+                    <form action="#" method="get">
+                        <input type="text" id="laTarea" placeholder="¿Qué tienes que hacer?">
+
+                        <select class="form-control" id="prioridades">
+                            <option value="">Selecciona una prioridad</option>
+                            <option value="diaria">Diaria</option>
+                            <option value="mensual">Mensual</option>
+                            <option value="urgente">URGENTE</option>
+                        </select>
+                    </form>
+                </div>
+
+                <div class="filtro">
+                    <div>
+                        <h4>Busca tus quehaceres</h4>
+                    </div>
+                    <select id="filtroPrioridades">
+                        <option value="">Todas</option>
+                        <option value="diaria">Diaria</option>
+                        <option value="mensual">Mensual</option>
+                        <option value="urgente">URGENTE</option>
+                    </select>
+
+                    <input type="text" placeholder="¿Qué tarea buscas?" id="buscarTarea">
+                </div>
+            </div>
+
+            <main>
+
+                <section class="tareas" id="tareas">
+
+
+                    <!-- este contenido hay que comentarlo cuando empeceis a desarrollar el listado de tareas-->
+
+                    <article id="1" class="urgente">
+                        <h2>Titulo de la tarea 1 - Esta tarea es DUMMY</h2>
+                        <a href="#" title="eliminar">Eliminar</a>
+                    </article>
+
+                    <article id="1" class="diaria">
+                        <h2>Titulo de la tarea 1 - Esta tarea es DUMMY</h2>
+                        <a href="#" title="eliminar">Eliminar</a>
+                    </article>
+
+                    <article id="2" class="mensual">
+                        <h2>Titulo de la tarea 2 - Esta tarea es DUMMY</h2>
+                        <a href="#" title="eliminar">Eliminar</a>
+                    </article>
+
+                    <article id="3" class="diaria">
+                        <h2>Titulo de la tarea 3 - Esta tarea es DUMMY</h2>
+                        <a href="#" title="eliminar">Eliminar</a>
+                    </article>
+
+                    <!-- este contenido hay que comentarlo cuando empeceis a desarrollar el listado de tareas-->
+
+                </section>
+
+            </main>
+
+
+
+        </div>
+
+        <footer>
+            <p>Aplicación de los quehaceres</p>
+        </footer>
+
+
+    </div>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
