@@ -37,12 +37,46 @@ function pintarTareas(pObjeto) {
     var h2 = document.createElement('h2');
     var a = document.createElement('a');
     var textoTarea = document.createTextNode('' + pObjeto.tarea + '')
+    var textoEliminar = document.createTextNode('Eliminar')
 
+    a.href = '#';
+    a.appendChild(textoEliminar);
     h2.appendChild(textoTarea);
     article.appendChild(h2);
     article.appendChild(a);
-    article.className = '' + pObjeto.prioridad + '';
+    article.classList.add(pObjeto.prioridad);
 
-    //TODAVÍA NO AÑADE LA CLASE AL ARTICLE
+    //FALTA AÑADIR EL ID Y EL A
     seccionTareas.appendChild(article)
+}
+
+// -----------FILTROS DE TAREAS-----------------
+
+var selectorPrioridad = document.querySelector('#filtroPrioridades')
+
+selectorPrioridad.addEventListener('change', recogePrioridad);
+
+function recogePrioridad(e) {
+    let prioridad = e.target.value;
+    let listaFiltradaPrioridades = new Array();
+
+    if (prioridad != '') {
+        listaFiltradaPrioridades = filtrarXprioridades(listaTareas, prioridad);
+        pintarTareas(listaFiltradaPrioridades);
+    } else {
+        pintarTareas(listaTareas);
+    }
+}
+
+function filtrarXprioridades(pListaTareas, pPrioridad) {
+    var listaFiltrada = new Array();
+
+    var contador = 0;
+    for (tarea of pListaTareas) {
+        if (tarea.prioridad.toLowerCase() == pPrioridad.toLowerCase()) {
+            listaFiltrada[contador] = tarea;
+            contador++
+        }
+    }
+    return listaFiltrada;
 }

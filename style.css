@@ -35,26 +35,27 @@ background-color: black;
     padding: 10px;
 }
 
-main .listaTareas article{
+main .seccionTareas article{
     position: relative;
     border: 1px solid black;
     border-radius: 25px;
     padding: 1em;
+    min-width: 250px;
 }
 
-main .listaTareas .diaria{
+main .seccionTareas .diaria{
     background-color: lightblue;
 }
 
-main .listaTareas .mensual{
+main .seccionTareas .mensual{
     background-color: lightgreen;
 }
 
-main .listaTareas .urgente{
+main .seccionTareas .urgente{
     background-color: tomato;
 }
 
-main .listaTareas article>a{
+main .seccionTareas article>a{
     background-color: red;
     color: white;
     display: inline-block;
@@ -68,8 +69,8 @@ main .listaTareas article>a{
     padding: 2px;
 }
 
-main .listaTareas article>a:hover{
-    width: 15%;
+main .seccionTareas article>a:hover{
+    width: 70px;
     text-align: center;
 }
 
