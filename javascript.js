@@ -52,31 +52,35 @@ function pintarTareas(pObjeto) {
 
 // -----------FILTROS DE TAREAS-----------------
 
-var selectorPrioridad = document.querySelector('#filtroPrioridades')
+var selectorPrioridad = document.querySelector('#filtroPrioridades');
 
 selectorPrioridad.addEventListener('change', recogePrioridad);
 
 function recogePrioridad(e) {
     let prioridad = e.target.value;
-    let listaFiltradaPrioridades = new Array();
+    let listaFiltradaTareas = new Array();
 
     if (prioridad != '') {
-        listaFiltradaPrioridades = filtrarXprioridades(listaTareas, prioridad);
-        pintarTareas(listaFiltradaPrioridades);
+        listaFiltradaTareas = filtrarXprioridad(listaTareas, prioridad);
+        pintarTareas(listaFiltradaTareas)
     } else {
-        pintarTareas(listaTareas);
+        pintarTareas(listaTareas)
     }
 }
 
-function filtrarXprioridades(pListaTareas, pPrioridad) {
+function filtrarXprioridad(pListaTareas, pPrioridad) {
     var listaFiltrada = new Array();
 
     var contador = 0;
-    for (tarea of pListaTareas) {
-        if (tarea.prioridad.toLowerCase() == pPrioridad.toLowerCase()) {
-            listaFiltrada[contador] = tarea;
+    for (prioridad of pListaTareas) {
+        if (prioridad.prioridad.toLowerCase() == pPrioridad.toLowerCase()) {
+
+            listaFiltrada[contador] = prioridad;
             contador++
         }
     }
+    console.log(listaFiltrada);
     return listaFiltrada;
 }
+
+// TRAS VARIOS INTENTOS REESCRIBIENDO EL CÓDIGO, NO CONSIGO AVERIGUAR POR QUÉ AL FILTRAR ME GENERA UNA NUEVA TAREA CON UNDEFINED. El console.log sí que me devuelve el array filtrado, así que imagino que el problema está en la función de pintarTareas
