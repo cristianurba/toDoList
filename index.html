@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="contenedor">
+
+    <!-- HEADER -->
+
+    <header>
+        <div class="cabecera">
+            <h2>Lista de QueHaceres</h2>
+        </div>
+    </header>
+
+    <body>
+        <div class="cuerpo">
+
+            <!-- SIDEBAR -->
+
+            <div class="sidebar">
+                <div class="introduceTarea">
+                    <div>
+                        <h4>Dime tu quehacer</h4>
+                    </div>
+                    <div class="formulario">
+                        <form action="#" method="get">
+                            <input type="text" id="laTarea" placeholder="¿Qué tienes que hacer?">
+                            <select class="form-control" id="prioridades">
+                                <option value="">Selecciona una prioridad</option>
+                                <option value="diaria">Diaria</option>
+                                <option value="mensual">Mensual</option>
+                                <option value="urgente">URGENTE</option>
+                            </select>
+                            <input id="btn" type="submit" value="Guardar">
+                        </form>
+                    </div>
+                </div>
+                <div class="filtro">
+                    <div>
+                        <h4>Busca tus quehaceres</h4>
+                    </div>
+                    <div class="filtrados">
+                        <select id="filtroPrioridades">
+                            <option value="">Todas</option>
+                            <option value="diaria">Diaria</option>
+                            <option value="mensual">Mensual</option>
+                            <option value="urgente">URGENTE</option>
+                        </select>
+
+                        <input type="text" placeholder="¿Qué tarea buscas?" id="buscarTarea">
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN TAREAS -->
+
+            <div class="tareas">
+                <section class="seccionTareas">
+
+
+                    <!-- este contenido hay que comentarlo cuando empeceis a desarrollar el listado de tareas-->
+
+                    <article id="1" class="urgente">
+                        <h2>Titulo de la tarea 1 - Esta tarea es DUMMY</h2>
+                        <a href="#" title="eliminar">Eliminar</a>
+                    </article>
+
+                    <article id="1" class="diaria">
+                        <h2>Titulo de la tarea 1 - Esta tarea es DUMMY</h2>
+                        <a href="#" title="eliminar">Eliminar</a>
+                    </article>
+
+                    <article id="2" class="mensual">
+                        <h2>Titulo de la tarea 2 - Esta tarea es DUMMY</h2>
+                        <a href="#" title="eliminar">Eliminar</a>
+                    </article>
+
+                    <article id="3" class="diaria">
+                        <h2>Titulo de la tarea 3 - Esta tarea es DUMMY</h2>
+                        <a href="#" title="eliminar">Eliminar</a>
+                    </article>
+
+                    <article id="4" class="diaria">
+                        <h2>Titulo de la tarea 4 - Esta tarea es DUMMY</h2>
+                        <a href="#" title="eliminar">Eliminar</a>
+                    </article>
+
+                    <!-- este contenido hay que comentarlo cuando empeceis a desarrollar el listado de tareas-->
+
+                </section>
+            </div>
+        </div>
+    </body>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <h4>Aplicación de los quehaceres</h4>
+    </footer>
+
+
+</div>
+
+</html>
