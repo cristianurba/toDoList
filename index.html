@@ -28,7 +28,7 @@
                         <h4>Dime tu quehacer</h4>
                     </div>
                     <div class="formulario">
-                        <form action="#" method="get">
+                        <form action="#" method="get" id="formulario">
                             <input type="text" id="laTarea" placeholder="¿Qué tienes que hacer?">
                             <select class="form-control" id="prioridades">
                                 <option value="">Selecciona una prioridad</option>
@@ -38,8 +38,12 @@
                             </select>
                             <input id="btn" type="submit" value="Guardar">
                         </form>
+                        <p id="mensaje"></p>
                     </div>
                 </div>
+
+
+                <!-- FILTRO DE TAREAS -->
                 <div class="filtro">
                     <div>
                         <h4>Busca tus quehaceres</h4>
@@ -60,37 +64,8 @@
             <!-- SECCIÓN TAREAS -->
 
             <div class="tareas">
-                <section class="seccionTareas">
+                <section id="seccionTareas">
 
-
-                    <!-- este contenido hay que comentarlo cuando empeceis a desarrollar el listado de tareas-->
-
-                    <article id="1" class="urgente">
-                        <h2>Titulo de la tarea 1 - Esta tarea es DUMMY</h2>
-                        <a href="#" title="eliminar">Eliminar</a>
-                    </article>
-
-                    <article id="1" class="diaria">
-                        <h2>Titulo de la tarea 1 - Esta tarea es DUMMY</h2>
-                        <a href="#" title="eliminar">Eliminar</a>
-                    </article>
-
-                    <article id="2" class="mensual">
-                        <h2>Titulo de la tarea 2 - Esta tarea es DUMMY</h2>
-                        <a href="#" title="eliminar">Eliminar</a>
-                    </article>
-
-                    <article id="3" class="diaria">
-                        <h2>Titulo de la tarea 3 - Esta tarea es DUMMY</h2>
-                        <a href="#" title="eliminar">Eliminar</a>
-                    </article>
-
-                    <article id="4" class="diaria">
-                        <h2>Titulo de la tarea 4 - Esta tarea es DUMMY</h2>
-                        <a href="#" title="eliminar">Eliminar</a>
-                    </article>
-
-                    <!-- este contenido hay que comentarlo cuando empeceis a desarrollar el listado de tareas-->
 
                 </section>
             </div>
@@ -105,5 +80,9 @@
 
 
 </div>
+
+<script src="./js/modelo.js"></script>
+<script src="./js/visual.js"></script>
+
 
 </html>

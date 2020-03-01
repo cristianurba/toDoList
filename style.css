@@ -56,26 +56,26 @@
     width: 70%;
 }
 
-.tareas .seccionTareas article{
+.tareas #seccionTareas article{
     padding: 1em;
     width: 100%;
     border: 1px solid black;
     position: relative;
 }
 
-.tareas .seccionTareas .diaria{
+.tareas #seccionTareas .diaria{
     background-color: lightblue;
 }
 
-.tareas .seccionTareas .mensual{
+.tareas #seccionTareas .mensual{
     background-color: lightgreen;
 }
 
-.tareas .seccionTareas .urgente{
+.tareas #seccionTareas .urgente{
     background-color: tomato;
 }
 
-.tareas .seccionTareas article>a{
+.tareas #seccionTareas article>a{
     background-color: red;
     color: white;
     text-decoration: none;
@@ -87,7 +87,7 @@
     transition: 1s;
 }
 
-.tareas .seccionTareas article>a:hover{
+.tareas #seccionTareas article>a:hover{
     width: 70px;
     height: 30px;
     text-align: center;
