@@ -19,6 +19,7 @@ boton.addEventListener('click', (e) => {
 });
 
 function pintarTareas(pListaTareas) {
+    seccionTareas.innerHTML = '';
     if (pListaTareas.lenght != 0) {
         pListaTareas.forEach(tarea => {
             seccionTareas.innerHTML += `<article id=${tarea.id} class=${tarea.prioridad}>
@@ -54,6 +55,7 @@ function pintarTarea(pRegistro) {
     enlace.href = ('#');
     let textoEliminar = document.createTextNode('Eliminar');
     enlace.appendChild(textoEliminar);
+    enlace.addEventListener('click', borrarTarea);
 
 
     article.appendChild(h2);
@@ -62,4 +64,40 @@ function pintarTarea(pRegistro) {
     article.id = pRegistro.id;
 
     seccionTareas.appendChild(article);
+}
+
+function borrarTarea(e) {
+    e.target.parentNode.remove();
+}
+
+// FILTRADO POR PRIORIDAD
+
+var selectorPrioridad = document.getElementById('filtroPrioridades');
+selectorPrioridad.addEventListener('change', recogePrioridad);
+
+function recogePrioridad(e) {
+    let prioridad = e.target.value;
+
+    if (prioridad != "") {
+        let listaFiltradaPrioridad = filtrarPorPrioridad(listaTareas, prioridad);
+
+        pintarTareas(listaFiltradaPrioridad);
+    } else {
+        pintarTareas(listaTareas);
+    }
+}
+
+function filtrarPorPrioridad(pListaTareas, pPrioridad) {
+    var listaFiltrada = new Array();
+    var contador = 0;
+
+    for (actividad of pListaTareas) {
+        if (actividad.prioridad.toLowerCase() == pPrioridad.toLowerCase()) {
+
+            listaFiltrada[contador] = actividad;
+            contador++;
+        }
+    }
+
+    return listaFiltrada;
 }
